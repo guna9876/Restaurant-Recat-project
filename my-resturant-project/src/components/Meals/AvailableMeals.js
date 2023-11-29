@@ -30,8 +30,14 @@ const DUMMY_MEALS = [
 ];
 
 const AvailableMeals = () => {
-  const mealItems = DUMMY_MEALS.map((meals) =><MealsItem key={meals.id} name={meals.name} description={meals.description} price={meals.price}
-  />);
+  const mealItems = DUMMY_MEALS.map((meal) => <MealsItem
+        id={meal.id}
+        key={meal.id}
+        name={meal.name}
+        description={meal.description}
+        price={meal.price}
+    />
+    )
 
   return (
     <section className={classes.meals}>
